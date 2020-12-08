@@ -1,0 +1,272 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+
+html,body{
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	color: #000;
+}
+
+/*Базовые*/
+.wrapper{}
+.container{
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+/*Основные*/
+
+@media (max-width: 1199.98px){
+	.container {
+		max-width: 1140px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+@media (max-width: 767.98px){
+	.container {
+		max-width: 750px;	
+	}
+}
+
+@media (max-width: 575.98px){
+	.container {
+		max-width: 540px;
+		margin: auto;
+		padding: 0 10px;
+	}
+}
+
+
+/*MAIN*/
+
+.main {
+	background: url(../img/bg.jpg);
+	background-size: cover;
+	height: 100%;
+}
+.title {
+	padding: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.title__img{
+	width: 50px;
+	height: 41px;
+	background: url(../img/title.svg) no-repeat;
+	background-size: 100%;
+	margin-right: 20px;
+}
+.title__text {
+	font-weight: 500;
+	font-size: 48px;
+	text-transform: uppercase;
+}
+.title__text span{
+	color: #E23434;	
+}
+
+
+.girls {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+	text-align: center;
+}
+.girl {
+	width: 25%;
+	margin-bottom: 50px;
+}
+.girl__img{
+	margin: 0 auto;
+	cursor: pointer;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border: 2px solid #E23434;
+	background-position: center center;
+	background-size: 100%;
+}
+.girl__info{
+	margin-top: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.girl__online {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #71FF90;
+}
+.girl__name {
+	padding-left: 16px;
+	font-size: 24px;
+}
+
+.girl__img { 
+	display: block; 
+	position: relative; 
+}
+
+.girl__img:after { 
+	padding-left: 80px;
+	content: 'Chat'; 
+	position: absolute; 
+	color: #fff;
+	top: 50%; 
+	left: 50%; 
+	transform: translate(-67%,-50%);
+	opacity: 0; 
+	font-size: 24px;
+	transition: 1s;
+	background: url(../img/chat.svg) no-repeat;
+	background-position: center center;
+	background-size: 24px;
+}
+
+.girl__img:before { 
+	content: ''; 
+	position: absolute; 
+	top: -2px; 
+	left: -2px; 
+	right: -2px; 
+	bottom: -2px; 
+	border-radius: 50%;
+	background: rgba(0,0,0,.4);  
+	opacity: 0; 
+	transition: 1s;
+}
+
+.girl__img:hover:before,
+.girl__img:hover:after { 
+	opacity: 1; 
+	transition: 1s;
+}
+
+
+#modal{
+	display: none;
+	transition: 3s;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 50px;
+	width: 600px;
+	background: #FFFFFF;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	text-align: center;
+}
+#modal:target {
+	display: block;
+}
+.modal__title {
+	font-weight: 500;
+	font-size: 24px;
+	text-transform: uppercase;
+}
+.reg {}
+.reg input{
+	font-size: 20px;
+	border-radius: 3px;
+	width: 100%;
+	text-align: center;
+	border: 1px solid #A1A1A1;
+}
+.textarea {
+	padding: 10px 20px 50px; 
+	margin-top: 50px;
+	padding-bottom: 50px;
+}
+.email {
+	padding: 10px 20px; 
+	margin-top: 25px; 
+}
+.submit {
+	padding: 10px 20px 10px 50px; 
+	margin-top: 5vh;
+	background: #E23434;
+	border-radius: 2px;
+	width: 100%;
+	font-weight: 500;
+	font-size: 24px;
+	color: #FFFFFF;
+	cursor: pointer;
+	background-image: url(../img/mail.svg);
+	background-repeat: no-repeat;
+	background-position: top 50% left 28%;
+	background-size: 32px;
+}
+
+
+
+@media (max-width: 1199.98px){
+	
+}
+
+@media (max-width: 991.98px) {
+	
+	.girl__img{
+		width: 150px;
+		height: 150px;
+	}
+}
+
+@media (max-width: 767.98px){
+	.girl {
+		width: 33%;
+	}
+	#modal{
+		width: 500px;
+	}
+}
+
+@media (max-width: 540.98px){
+	.girl {
+		width: 50%;
+	}
+	#modal{
+		width: 300px;
+	}
+	.modal__title {
+	    font-size: 15px;
+	}
+	.reg input {
+	    font-size: 14px;
+	}
+	.textarea {
+	    padding: 10px 20px 50px;
+	    margin-top: 20px;
+	}
+	.submit {
+	    background-position: top 50% left 20%;
+	    background-size: 20px;
+	}
+}

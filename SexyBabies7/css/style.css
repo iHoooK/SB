@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+
+.intro {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: url("../img/cover.jpg") center no-repeat;
+    background-size: cover;
+}
+.intro:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.video {
+    position: relative;
+    z-index: 1;
+    height: 100%;   
+}
+.video__media {
+    height: 100%;
+    width: 100%;
+    transition-duration: 0ms;
+    object-fit: cover;
+}
+
+/**/
+.intro__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title {
+    max-width: 440px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    color: #FE70D6;
+}
+.content__form {
+    width: 100%;
+    text-align: center;
+}
+.form__title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.form__title span{
+    color: #1FD87F;
+}
+.form__subtitle {
+    margin: 0;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+.form__time {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 45px;
+}
+/*TIMER*/
+.flip-clock-wrapper {
+    width: 300px;
+    margin: 0;
+}
+.flip-clock-divider.minutes{
+    display: none;
+}
+.flip-clock-divider .flip-clock-label{
+    display: none;
+}
+
+
+
+/**/
+.hour {    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+}
+.hour:after {    
+    content: ":";
+    display: block;
+    position: absolute;
+    top: 46%;
+    transform: translate(0, -50%);
+    right: -27px;
+    z-index: 2;
+    font-size: 60px;
+    line-height: 59px;
+    color: #1D1E21;
+}
+.minute {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.number {
+    position: relative;
+    margin: 0;
+    padding: 15px;
+    font-size: 50px;
+    line-height: 59px;
+    color: #1D1E21;
+    background: #F0F0F0;
+    border-radius: 10px;
+    z-index: 1;
+}
+.number:first-child{    
+    margin-right: 5px;
+}
+.number span:after {    
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 0;
+    z-index: -1;
+    background: #C8C5C5;
+}
+.reg {}
+.email {
+    text-align: center;
+    padding: 15px;
+    width: 300px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    background: #FFFFFF;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+}
+.submit {
+    padding: 15px;
+    width: 300px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    background: #1FD87F;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #ffffff;
+}
+
+@media (max-width: 1199.98px){
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .container {
+        max-width: 960px;
+    }
+    .title {
+        max-width: 375px;
+    }
+}
+
+@media (max-width: 767.98px){
+    .container {
+        max-width: 750px;   
+    }
+    .content{
+        flex-direction: column;
+        text-align: center;
+    }
+    .title{
+        max-width: 90%;
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: 575.98px){
+    .container {
+        max-width: 540px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+    .intro:after {
+	    background-color: rgba(0, 0, 0, .5);
+	}
+    .intro__content{
+        justify-content: start;
+    }
+    .title{
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .form__title{
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .form__subtitle{
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 20px;
+    }
+    .email,.submit{
+        padding: 13px;
+    }
+    .intro {
+        height: 100vh;
+        overflow: visible;
+    }
+}

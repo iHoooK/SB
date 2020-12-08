@@ -1,0 +1,314 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+
+html,body{
+	height: 100%;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-image: url(../img/bg.jpg);
+    background-size: 100%;
+}
+body:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*Базовые*/
+
+.container{
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 0 10px;    
+}
+
+
+/*Основные*/
+
+
+
+.content__inner {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.girls {
+    width: 40%;
+}
+.btn {}
+.girl {}
+.content__body {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+.arrow {
+    position: relative;
+    width: 80px;
+    height: 50px;
+    margin: 20px;
+    animation: arrow 1s linear infinite;
+}
+.arrow div {
+    position: relative;
+    top: 20px;
+    width: 90px;
+    height: 10px;
+    background-color: #900c7f;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    left:0;
+    display: block;
+}
+.arrow div::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    top: -11px;
+    left: -8px;
+    background-color: #900c7f;
+    transform: rotate(-45deg);
+}
+.arrow div::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    top: 11px;
+    left: -8px;
+    background-color: #900c7f;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    transform: rotate(45deg);
+}
+@keyframes arrow {
+    0% {
+        right:0;
+    }
+    50% {
+        right:10px;
+    }
+    100% {
+        right:0;
+    }
+}
+.content__text {
+    font-size: 50px;
+    font-weight: bold;
+    color: #8c0b0b;
+    text-shadow: 0 0 5px #ffffff,
+                0 0 10px #ffffff,
+                0 0 20px #ffffff,
+                0 0 40px #900c7f,
+                0 0 80px #900c7f,
+                0 0 90px #900c7f,
+                0 0 100px #900c7f,
+                0 0 150px #900c7f;
+}
+
+.girls { 
+    position:relative; 
+}
+.btn { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, -50%);
+    opacity:0; 
+    animation-name: fade; 
+    animation-duration: 1.2s; 
+    animation-iteration-count: infinite; 
+}
+.girls a:nth-child(1) { 
+    animation-delay: 0s;  
+}
+.girls a:nth-child(2) { 
+    animation-delay: 0.4s;  
+}
+.girls a:nth-child(3) { 
+    animation-delay: 0.8s;  
+}
+.girl{
+    width: 100%;
+}
+@keyframes fade {
+  0%   { opacity: 0; }
+  11.11%   { opacity: 1; z-index: 4;}
+  33.33%  { opacity: 1; z-index: 4;}
+  44.44%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+/*MODAL*/
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 20px auto;
+    padding: 0;
+    max-width: 800px;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+.modal-header {
+    padding: 2px 16px;
+    background-color: #920b91;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.close1,.close2,.close3 {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close1:hover,
+.close1:focus,
+.close2:hover,
+.close2:focus,
+.close3:hover,
+.close3:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.modal__girl{
+    padding: 10px;
+    width: 40%;
+}
+.modal__girl img{
+    width: 100%;
+    border-radius: 18px;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+}
+
+
+
+/*FORM*/
+.reg {
+    width:300px;
+}
+.reg input{
+    margin:10px 0;
+    border-radius: 18px;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+    margin:0;
+    width:100%;
+    padding: 8px 10px;
+    font-size:16px;
+    color:#f3d6ef;
+    border:solid 1px #6b0961;
+    text-shadow: 1px 1px 0 #000;     
+    box-shadow: inset 1px 1px 3px 0 #000;
+    -moz-box-shadow: inset 1px 1px 3px 0 #000;
+    -webkit-box-shadow: inset 1px 1px 3px 0 #000;     
+    background:-moz-linear-gradient(0% 100% 90deg,#bb7dbf, #a850af);
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#a850af), to(#bb7dbf));
+    margin: 5px 0;
+}
+.textarea {
+    height: 100px;
+}
+.email {}
+.submit {
+    font-weight:bold;
+}
+
+
+@media (max-width: 1199.98px){
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .container {
+        max-width: 960px;
+    }
+    .modal-content {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 767.98px){
+    .container {
+        max-width: 750px;   
+    }
+    .content__text {
+        font-size: 30px;
+    }
+    .modal-content {
+        max-width: 400px;
+    }
+    .reg input{
+        width:95%;
+    }
+}
+
+@media (max-width: 575.98px){
+    .container {
+        max-width: 540px;
+        margin: auto;
+        padding: 0 10px;
+    }
+    .content__inner{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .girls {
+        width: 60%;
+    }
+    .content__body{
+        position: absolute;
+        bottom: 10px;
+    }
+    .arrow{
+        display: none;
+    }
+    .content__text {
+        font-size: 26px;
+    }
+}
