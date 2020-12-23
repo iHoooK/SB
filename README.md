@@ -1,18 +1,18 @@
 # Сайты:
 
 
-[1](https://ihoook.github.io/sb/SexyBabies1)
+[1](https://ihoook.github.io/SB/SexyBabies1)
 
-[2](https://ihoook.github.io/ank/SexyBabies2)
+[2](https://ihoook.github.io/SB/SexyBabies2)
 
-[3](https://ihoook.github.io/ank/SexyBabies3)
+[3](https://ihoook.github.io/SB/SexyBabies3)
 
-[4](https://ihoook.github.io/ank/SexyBabies4)
+[4](https://ihoook.github.io/SB/SexyBabies4)
 
-[5](https://ihoook.github.io/ank/SexyBabies5)
+[5](https://ihoook.github.io/SB/SexyBabies5)
 
-[6](https://ihoook.github.io/ank/SexyBabies6)
+[6](https://ihoook.github.io/SB/SexyBabies6)
 
-[7](https://ihoook.github.io/ank/SexyBabies7)
+[7](https://ihoook.github.io/SB/SexyBabies7)
 
-[8](https://ihoook.github.io/ank/SexyBabies8)
+[8](https://ihoook.github.io/SB/SexyBabies8)
